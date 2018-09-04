@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <style>
+        .middle{
+            float: left;
+            width: 100%;
+            height: 50px;
+            background-color: #fff9ca;
+        }
+        .middle-wrap{
+            margin: 0 200px 0 150px;
+        }
+        .left{
+            float: left;
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            margin-left: -100%;       /*负边距的作用就是让左边div盖在中间div上面*/
+        }
+        .right{
+            float: left;
+            width: 200px;
+            height: 50px;
+            background-color: yellow;
+            margin-left: -200px;    /*让右边的div覆盖在中间的div右边*/
+        }
+    </style>
+</head>
+<body>
+<div class="middle">
+    <div class="middle-wrap">middle</div>
+</div>
+<div class="left">left</div>
+<div class="right">right</div>
+</body>
+</html>
